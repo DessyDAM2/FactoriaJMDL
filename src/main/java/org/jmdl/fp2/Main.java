@@ -33,29 +33,114 @@ public class Main {
         return sc.nextInt();
     }
 
-    public static void crearTablas(){
-        try(Connection connection = Conexion.conectar()){
+    public static void crearTablas() {
+        try (Connection connection = Conexion.conectar()) {
             Statement statement = connection.createStatement();
+
+            //Tabla Proyectos
+            statement.execute("CREATE TABLE Proyectos (" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "PROYECTO_ID int not null unique," +
+                    "Titulo varchar(20)," +
+                    "Descripcion varchar(120)," +
+                    "Coordinador varchar(20)," +
+                    "Estado varchar(20)," +
+                    "Visibilidad varchar(20)," +
+                    "Visitas int)");
+
+            //Tabla Centros
+            statement.execute("CREATE TABLE Centros(" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "ID_CENTRO int not null unique," +
+                    "Nombre varchar(20)," +
+                    "Web varchar(20)," +
+                    "Contacto varchar(20))");
+
+            //Tabla Familia Profesional
+            statement.execute("CREATE TABLE FamiliaProfesional(" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "FAMILIA_PROFESIONAL_ID int not null unique)");
+
+            //Tabla usuarios
+            statement.execute("CREATE TABLE Usuario(" +
+                    "AUTO_ID int not null auto_increment primary key ," +
+                    "ID_Centro int not null ," +
+                    "ID_USUARIO int not null unique ," +
+                    "Nombre varchar(20) ," +
+                    "Apellidos varchar(20)," +
+                    "Contraseña varchar(30)," +
+                    "Rol varchar(15)," +
+                    "Puntuacion double ," +
+                    "Familia_Profesional varchar(20)," +
+                    "Email varchar(20)," +
+                    "Telefono int," +
+                    "foreign key (Familia_Profesional) REFERENCES FamiliaProfesional(Familia_Profesional))");
+
+            //Tabla Participantes
             statement.execute("CREATE TABLE Participantes (" +
                     "AUTO_ID int not null auto_increment primary key ," +
-                    " Proyecto_ID int not null," +
+                    "Proyecto_ID int not null," +
                     "ID_Usuario int not null, Cordinador varchar(20)," +
                     "Fec_Ini date ," +
-                    "Fec_Fin date/*, " +
-                    "foreign key (Proyecto_ID)REFERENCES Proyectos(Proyecto_ID), foreign key (ID_Usuario) REFERENCES Usuario(ID_Usuario)*/)");
-        statement.execute("CREATE TABLE Proyectos (" +
-                "AUTO_ID int not null auto_increment primary key" +
-                ")");
-        }catch (SQLException e){
+                    "Fec_Fin date, " +
+                    "foreign key (Proyecto_ID)REFERENCES Proyectos(PROYECTO_ID), foreign key (ID_Usuario) REFERENCES Usuario(ID_USUARIO))");
+
+            //Tabla Comentarios
+            statement.execute("CREATE TABLE Comentarios(" +
+                    "AUTO_ID int not null auto_increment primary key ," +
+                    "Escritor int not null ," +
+                    "Proyecto_ID int not null ," +
+                    "Contenido varchar(20)," +
+                    "foreign key (Escritor) REFERENCES Usuario(ID_USUARIO))");
+
+            //Tabla Gustos
+            statement.execute("CREATE TABLE Gustos(" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "ID_Usuario int not null," +
+                    "Gusto varchar(20)," +
+                    "foreign key (ID_Usuario) REFERENCES Usuario(ID_USUARIO))");
+
+            //Tabla Familia Profesional Implicada
+            statement.execute("CREATE TABLE FamiliaProfesionalImplicada(" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "Proyecto_ID int not null," +
+                    "Familia_Profesional_ID int not null," +
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)," +
+                    "foreign key (Familia_Profesional_ID) REFERENCES FamialiaProfesional(FAMILIA_PROFESIOANL_ID))");
+
+            //Tabla ProyectosFav
+            statement.execute("CREATE TABLE ProyectosFav(" +
+                    "AUTO_ID int not null auto_increment primary key ," +
+                    "Proyecto_ID int not null," +
+                    "ID_Usuario int not null ," +
+                    "foreign key (ID_Usuario) REFERENCES Usuario(ID_USUARIO))");
+
+            //Tabla CentrosDeProyectos
+            statement.execute("CREATE TABLE CentrosDeProyecto(" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "Proyecto_ID int not null," +
+                    "ID_Centro int not null ," +
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)," +
+                    "foreign key (ID_Centro) REFERENCES Centros(ID_CENTRO))");
+
+            //Tabla Tags
+            statement.execute("CREATE TABLE Tags(" +
+                    "AUTO_ID int not null auto_increment primary key," +
+                    "Proyecto_ID int not null ," +
+                    "Tag varchar(20)," +
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)");
+
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public static void borrarTablas(){
+    public static void borrarTablas() {
 
     }
 
-    public static void crearBD(){
+    public static void crearBD() {
 
     }
 }

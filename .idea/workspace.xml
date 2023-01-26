@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="Primer Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Alumno_FP/Desktop/BibliotecaFicheros",
+    "last_opened_file_path": "C:/Users/Alumno_FP/Desktop/BibliotecaHibert",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,11 +70,24 @@
       <updated>1673600700233</updated>
       <workItem from="1673600701384" duration="195000" />
       <workItem from="1674649290920" duration="249000" />
-      <workItem from="1674649554608" duration="2629000" />
+      <workItem from="1674649554608" duration="2720000" />
+      <workItem from="1674718551804" duration="2378000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer Commit">
+      <created>1674652401022</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674652401022</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer Commit" />
   </component>
 </project>
