@@ -61,6 +61,7 @@ public class Main {
                     "AUTO_ID int not null auto_increment primary key," +
                     "FAMILIA_PROFESIONAL_ID int not null unique)");
 
+
             //Tabla usuarios
             statement.execute("CREATE TABLE Usuario(" +
                     "AUTO_ID int not null auto_increment primary key ," +
@@ -71,10 +72,10 @@ public class Main {
                     "Contraseña varchar(30)," +
                     "Rol varchar(15)," +
                     "Puntuacion double ," +
-                    "Familia_Profesional varchar(20)," +
+                    "Familia_Profesional int not null," +
                     "Email varchar(20)," +
                     "Telefono int," +
-                    "foreign key (Familia_Profesional) REFERENCES FamiliaProfesional(Familia_Profesional))");
+                    "foreign key (Familia_Profesional) REFERENCES FamiliaProfesional(FAMILIA_PROFESIONAL_ID) )");
 
             //Tabla Participantes
             statement.execute("CREATE TABLE Participantes (" +
@@ -106,7 +107,7 @@ public class Main {
                     "Proyecto_ID int not null," +
                     "Familia_Profesional_ID int not null," +
                     "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)," +
-                    "foreign key (Familia_Profesional_ID) REFERENCES FamialiaProfesional(FAMILIA_PROFESIOANL_ID))");
+                    "foreign key (Familia_Profesional_ID) REFERENCES FamiliaProfesional(FAMILIA_PROFESIONAL_ID))");
 
             //Tabla ProyectosFav
             statement.execute("CREATE TABLE ProyectosFav(" +
@@ -128,7 +129,7 @@ public class Main {
                     "AUTO_ID int not null auto_increment primary key," +
                     "Proyecto_ID int not null ," +
                     "Tag varchar(20)," +
-                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)");
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID))");
 
 
         } catch (SQLException e) {
@@ -137,10 +138,31 @@ public class Main {
     }
 
     public static void borrarTablas() {
-
+        try (Connection connection = Conexion.conectar()) {
+            Statement statement = connection.createStatement();
+            statement.execute("DROP TABLE IF EXISTS Tags");
+            statement.execute("DROP TABLE IF EXISTS ProyectosFav");
+            statement.execute("DROP TABLE IF EXISTS CentrosDeProyecto");
+            statement.execute("DROP TABLE IF EXISTS FamiliaProfesionalImplicada");
+            statement.execute("DROP TABLE IF EXISTS Gustos");
+            statement.execute("DROP TABLE IF EXISTS Comentarios");
+            statement.execute("DROP TABLE IF EXISTS Participantes");
+            statement.execute("DROP TABLE IF EXISTS Usuario");
+            statement.execute("DROP TABLE IF EXISTS FamiliaProfesional");
+            statement.execute("DROP TABLE IF EXISTS Proyectos");
+            statement.execute("DROP TABLE IF EXISTS Centros");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void crearBD() {
-
+        try (Connection connection = Conexion.conectar()) {
+            Statement statement = connection.createStatement();
+            statement.execute("CREATE DATABASE FactoriaProyectos");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
 }

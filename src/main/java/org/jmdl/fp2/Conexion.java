@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String URL = "jdbc:mysql://fp2.croh1mygfad5.eu-west-3.rds.amazonaws.com";
+    private static final String URL = "jdbc:mysql://fp2.croh1mygfad5.eu-west-3.rds.amazonaws.com/FactoriaProyectos";
     private static final String USER = "admin";
     private static final String passwd = "FP2%SanAlberto";
 
