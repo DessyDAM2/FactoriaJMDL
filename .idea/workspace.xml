@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="Creacion de las tablas">
+    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entCentros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entCentrosDeProyecto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entComentarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesionalImplicada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entGustos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entParticipantes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectosFav.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entTags.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" afterDir="false" />
     </list>
@@ -29,13 +43,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2KGV2JxNYlX0RSEkCcc1x1ONSiq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,11 +51,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JPA.DatabaseSchemaImportDialog": "82e1cef6-6b9c-4c0e-b773-44c4cfa240d1",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Alumno_FP/Desktop/BibliotecaFicheros",
+    "last_opened_file_path": "C:/Users/Alumno_FP/IdeaProjects/FactoriaJMDL",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,31 +66,13 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "mysql"
-    ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL"
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jmdl.fp2.Main" />
-      <module name="FactoriaJMDL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jmdl.fp2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="entity" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -94,32 +84,23 @@
       <updated>1673600700233</updated>
       <workItem from="1673600701384" duration="195000" />
       <workItem from="1674649290920" duration="249000" />
-      <workItem from="1674649554608" duration="2720000" />
-      <workItem from="1674718551804" duration="4325000" />
+      <workItem from="1674649554608" duration="2629000" />
+      <workItem from="1674806214170" duration="3985000" />
     </task>
-    <task id="LOCAL-00001" summary="Primer Commit">
-      <created>1674652401022</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1674652401022</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Creacion de las tablas">
-      <created>1674721140936</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1674721140936</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Primer Commit" />
-    <MESSAGE value="Creacion de las tablas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion de las tablas" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
