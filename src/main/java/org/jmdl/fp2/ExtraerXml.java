@@ -18,7 +18,7 @@ public class ExtraerXml {
      */
     public static void main(String[] args) throws Exception {
 
-        final String URI = "xmldb:exist://localhost:8080/exist/xmlrpc/db/";
+        final String URI = "xmldb:exist://localhost:8181/exist/xmlrpc/db/"; //Cambiad puertos
         final String driver = "org.exist.xmldb.DatabaseImpl";
 
         // initialize database driver
