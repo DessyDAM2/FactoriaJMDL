@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="Creacion de las tablas">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="Creacion de las tablas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Dessy" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Alumno_FP/Desktop/BibliotecaFicheros",
+    "last_opened_file_path": "C:/Users/Alumno_FP/Desktop/FactoriaJDML/FactoriaJMDL",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,6 +95,7 @@
       <workItem from="1674649290920" duration="249000" />
       <workItem from="1674649554608" duration="2720000" />
       <workItem from="1674718551804" duration="4325000" />
+      <workItem from="1674806084481" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Primer Commit">
       <created>1674652401022</created>
