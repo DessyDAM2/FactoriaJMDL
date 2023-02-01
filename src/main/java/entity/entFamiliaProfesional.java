@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "FamiliaProfesional", schema = "FactoriaProyectos", catalog = "")
+@Table(name = "FamiliaProfesional", schema = "FactoriaProyectos")
 public class entFamiliaProfesional {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -17,6 +17,12 @@ public class entFamiliaProfesional {
     @Basic
     @Column(name = "Nombre_Familia")
     private String nombreFamilia;
+    @ManyToOne
+    @JoinColumn(name = "FAMILIA_PROFESIONAL_ID", referencedColumnName = "FAMILIA_PROFESIONAL_ID", nullable = false)
+    private entFamiliaProfesionalImplicada familiaProfesionalImplicadaByFamiliaProfesionalId;
+    @ManyToOne
+    @JoinColumn(name = "FAMILIA_PROFESIONAL_ID", referencedColumnName = "Familia_Profesional", nullable = false)
+    private entUsuario usuarioByFamiliaProfesionalId;
 
     public int getAutoId() {
         return autoId;
@@ -53,5 +59,21 @@ public class entFamiliaProfesional {
     @Override
     public int hashCode() {
         return Objects.hash(autoId, familiaProfesionalId, nombreFamilia);
+    }
+
+    public entFamiliaProfesionalImplicada getFamiliaProfesionalImplicadaByFamiliaProfesionalId() {
+        return familiaProfesionalImplicadaByFamiliaProfesionalId;
+    }
+
+    public void setFamiliaProfesionalImplicadaByFamiliaProfesionalId(entFamiliaProfesionalImplicada familiaProfesionalImplicadaByFamiliaProfesionalId) {
+        this.familiaProfesionalImplicadaByFamiliaProfesionalId = familiaProfesionalImplicadaByFamiliaProfesionalId;
+    }
+
+    public entUsuario getUsuarioByFamiliaProfesionalId() {
+        return usuarioByFamiliaProfesionalId;
+    }
+
+    public void setUsuarioByFamiliaProfesionalId(entUsuario usuarioByFamiliaProfesionalId) {
+        this.usuarioByFamiliaProfesionalId = usuarioByFamiliaProfesionalId;
     }
 }

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Centros", schema = "FactoriaProyectos", catalog = "")
+@Table(name = "Centros", schema = "FactoriaProyectos")
 public class entCentros {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -23,6 +23,12 @@ public class entCentros {
     @Basic
     @Column(name = "Contacto")
     private String contacto;
+    @ManyToOne
+    @JoinColumn(name = "ID_CENTRO", referencedColumnName = "ID_CENTRO", nullable = false)
+    private entCentrosDeProyecto centrosDeProyectoByIdCentro;
+    @ManyToOne
+    @JoinColumn(name = "ID_CENTRO", referencedColumnName = "ID_CENTRO", nullable = false)
+    private entUsuario usuarioByIdCentro;
 
     public int getAutoId() {
         return autoId;
@@ -75,5 +81,21 @@ public class entCentros {
     @Override
     public int hashCode() {
         return Objects.hash(autoId, idCentro, nombre, web, contacto);
+    }
+
+    public entCentrosDeProyecto getCentrosDeProyectoByIdCentro() {
+        return centrosDeProyectoByIdCentro;
+    }
+
+    public void setCentrosDeProyectoByIdCentro(entCentrosDeProyecto centrosDeProyectoByIdCentro) {
+        this.centrosDeProyectoByIdCentro = centrosDeProyectoByIdCentro;
+    }
+
+    public entUsuario getUsuarioByIdCentro() {
+        return usuarioByIdCentro;
+    }
+
+    public void setUsuarioByIdCentro(entUsuario usuarioByIdCentro) {
+        this.usuarioByIdCentro = usuarioByIdCentro;
     }
 }

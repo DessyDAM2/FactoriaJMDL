@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Proyectos", schema = "FactoriaProyectos", catalog = "")
+@Table(name = "Proyectos", schema = "FactoriaProyectos")
 public class entProyectos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -44,6 +44,12 @@ public class entProyectos {
     @ManyToOne
     @JoinColumn(name = "PROYECTO_ID", referencedColumnName = "Proyecto_ID", nullable = false)
     private entParticipantes participantesByProyectoId;
+    @ManyToOne
+    @JoinColumn(name = "PROYECTO_ID", referencedColumnName = "PROYECTO_ID", nullable = false)
+    private entProyectosFav proyectosFavByProyectoId;
+    @ManyToOne
+    @JoinColumn(name = "PROYECTO_ID", referencedColumnName = "PROYECTO_ID", nullable = false)
+    private entTags tagsByProyectoId;
 
     public int getAutoId() {
         return autoId;
@@ -152,5 +158,21 @@ public class entProyectos {
 
     public void setParticipantesByProyectoId(entParticipantes participantesByProyectoId) {
         this.participantesByProyectoId = participantesByProyectoId;
+    }
+
+    public entProyectosFav getProyectosFavByProyectoId() {
+        return proyectosFavByProyectoId;
+    }
+
+    public void setProyectosFavByProyectoId(entProyectosFav proyectosFavByProyectoId) {
+        this.proyectosFavByProyectoId = proyectosFavByProyectoId;
+    }
+
+    public entTags getTagsByProyectoId() {
+        return tagsByProyectoId;
+    }
+
+    public void setTagsByProyectoId(entTags tagsByProyectoId) {
+        this.tagsByProyectoId = tagsByProyectoId;
     }
 }

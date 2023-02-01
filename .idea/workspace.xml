@@ -4,31 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entCentros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entCentrosDeProyecto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entComentarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesionalImplicada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entGustos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entParticipantes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectosFav.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entTags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/entUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a7e9e88-e717-4e68-9c42-7cae28216a34.xml" beforeDir="false" />
+    <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/ExtraerXml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entCentros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entCentros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entCentrosDeProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entCentrosDeProyecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entComentarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entComentarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesionalImplicada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesionalImplicada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entGustos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entGustos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entParticipantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entParticipantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entProyectosFav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectosFav.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +37,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -85,8 +89,17 @@
       <workItem from="1673600701384" duration="195000" />
       <workItem from="1674649290920" duration="249000" />
       <workItem from="1674649554608" duration="2629000" />
-      <workItem from="1674806214170" duration="3985000" />
+      <workItem from="1674806214170" duration="6996000" />
+      <workItem from="1675251838766" duration="3642000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit">
+      <created>1674810659106</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674810659106</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +115,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>

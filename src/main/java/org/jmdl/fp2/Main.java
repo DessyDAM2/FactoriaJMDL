@@ -1,10 +1,8 @@
 package org.jmdl.fp2;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -71,7 +69,7 @@ public class Main {
             //Tabla usuarios
             statement.execute("CREATE TABLE Usuario(" +
                     "AUTO_ID int not null auto_increment primary key ," +
-                    "ID_CENTRO int not null ," +
+                    "ID_Centro int not null ," +
                     "ID_USUARIO int not null unique ," +
                     "Nombre varchar(20) ," +
                     "Apellidos varchar(20)," +
@@ -82,18 +80,19 @@ public class Main {
                     "Email varchar(20)," +
                     "Telefono int," +
                     "foreign key (Familia_Profesional) REFERENCES FamiliaProfesional(FAMILIA_PROFESIONAL_ID)," +
-                    "foreign key (ID_CENTRO) REFERENCES Centros(ID_CENTRO) "+
+                    "foreign key (ID_Centro) REFERENCES Centros(ID_CENTRO) "+
                     ")");
 
             //Tabla Participantes
             statement.execute("CREATE TABLE Participantes (" +
                     "AUTO_ID int not null auto_increment primary key ," +
-                    "Proyecto_ID int not null," +
-                    "ID_Usuario int not null, Cordinador varchar(20)," +
+                    "Proyecto_id int not null," +
+                    "id_Usuario int not null, " +
+                    "Cordinador varchar(20)," +
                     "Fec_Ini date ," +
                     "Fec_Fin date, " +
-                    "foreign key (PROYECTO_ID)REFERENCES Proyectos(PROYECTO_ID), " +
-                    "foreign key (ID_USUARIO) REFERENCES Usuario(ID_USUARIO)" +
+                    "foreign key (Proyecto_id)REFERENCES Proyectos(PROYECTO_ID), " +
+                    "foreign key (id_Usuario) REFERENCES Usuario(ID_USUARIO)" +
 
                     ")");
 
@@ -101,10 +100,10 @@ public class Main {
             statement.execute("CREATE TABLE Comentarios(" +
                     "AUTO_ID int not null auto_increment primary key ," +
                     "Escritor int not null ," +
-                    "Proyecto_ID int not null ," +
+                    "Proyecto_id int not null ," +
                     "Contenido varchar(20)," +
                     "foreign key (Escritor) REFERENCES Usuario(ID_USUARIO)," +
-                    "foreign key (Proyecto_ID)REFERENCES Proyectos(PROYECTO_ID) "+
+                    "foreign key (Proyecto_id)REFERENCES Proyectos(PROYECTO_ID) "+
                     ")");
 
             //Tabla Gustos
@@ -125,25 +124,25 @@ public class Main {
             //Tabla ProyectosFav
             statement.execute("CREATE TABLE ProyectosFav(" +
                     "AUTO_ID int not null auto_increment primary key ," +
-                    "PROYECTO_ID int not null," +
+                    "Proyecto_ID int not null," +
                     "ID_USUARIO int not null ," +
-                    "foreign key (PROYECTO_ID) REFERENCES Proyectos(PROYECTO_ID)," +
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)," +
                     "foreign key (ID_USUARIO) REFERENCES Usuario(ID_USUARIO))");
 
             //Tabla CentrosDeProyectos
             statement.execute("CREATE TABLE CentrosDeProyecto(" +
                     "AUTO_ID int not null auto_increment primary key," +
-                    "PROYECTO_ID int not null," +
-                    "ID_CENTRO int not null ," +
-                    "foreign key (PROYECTO_ID) REFERENCES Proyectos(PROYECTO_ID)," +
-                    "foreign key (ID_CENTRO) REFERENCES Centros(ID_CENTRO))");
+                    "Proyecto_ID int not null," +
+                    "ID_Centro int not null ," +
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID)," +
+                    "foreign key (ID_Centro) REFERENCES Centros(ID_CENTRO))");
 
             //Tabla Tags
             statement.execute("CREATE TABLE Tags(" +
                     "AUTO_ID int not null auto_increment primary key," +
-                    "PROYECTO_ID int not null ," +
+                    "Proyecto_ID int not null ," +
                     "Tag varchar(20)," +
-                    "foreign key (PROYECTO_ID) REFERENCES Proyectos(PROYECTO_ID))");
+                    "foreign key (Proyecto_ID) REFERENCES Proyectos(PROYECTO_ID))");
 
 
         } catch (SQLException e) {
