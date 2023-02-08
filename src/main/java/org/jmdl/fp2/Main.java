@@ -17,8 +17,16 @@ public class Main {
             addDB();
             opcion = menu();
             switch (opcion) {
-                case 1 -> crearTablas();
-                case 2 -> borrarTablas();
+                case 1 -> {
+                    DBName="FactoriaProyectos";
+                    addDB();addDB();
+                    crearTablas();
+                }
+                case 2 -> {
+                    DBName="FactoriaProyectos";
+                    addDB();
+                    borrarTablas();
+                }
                 case 3 -> crearBD();
                 case 0 -> System.out.println("Salir");
             }
@@ -41,7 +49,7 @@ public class Main {
             Statement statement = connection.createStatement();
 
             //Tabla Proyectos
-            statement.execute("CREATE TABLE Proyectos (" +
+            statement.execute("CREATE TABLE IF NOT EXISTS Proyectos (" +
                     "AUTO_ID int not null auto_increment primary key," +
                     "PROYECTO_ID int not null unique," +
                     "Titulo varchar(20)," +
@@ -52,7 +60,7 @@ public class Main {
                     "Visitas int)");
 
             //Tabla Centros
-            statement.execute("CREATE TABLE Centros(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS Centros(" +
                     "AUTO_ID int not null auto_increment primary key," +
                     "ID_CENTRO int not null unique," +
                     "Nombre varchar(20)," +
@@ -60,14 +68,14 @@ public class Main {
                     "Contacto varchar(20))");
 
             //Tabla Familia Profesional
-            statement.execute("CREATE TABLE FamiliaProfesional(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS FamiliaProfesional(" +
                     "AUTO_ID int not null auto_increment primary key," +
                     "FAMILIA_PROFESIONAL_ID int not null unique," +
                     "Nombre_Familia varchar(60) not null unique)");
 
 
             //Tabla usuarios
-            statement.execute("CREATE TABLE Usuario(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS Usuario(" +
                     "AUTO_ID int not null auto_increment primary key ," +
                     "ID_Centro int not null ," +
                     "ID_USUARIO int not null unique ," +
@@ -84,7 +92,7 @@ public class Main {
                     ")");
 
             //Tabla Participantes
-            statement.execute("CREATE TABLE Participantes (" +
+            statement.execute("CREATE TABLE IF NOT EXISTS Participantes (" +
                     "AUTO_ID int not null auto_increment primary key ," +
                     "Proyecto_id int not null," +
                     "id_Usuario int not null, " +
@@ -97,7 +105,7 @@ public class Main {
                     ")");
 
             //Tabla Comentarios
-            statement.execute("CREATE TABLE Comentarios(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS Comentarios (" +
                     "AUTO_ID int not null auto_increment primary key ," +
                     "Escritor int not null ," +
                     "Proyecto_id int not null ," +
@@ -106,15 +114,9 @@ public class Main {
                     "foreign key (Proyecto_id)REFERENCES Proyectos(PROYECTO_ID) "+
                     ")");
 
-            //Tabla Gustos
-            statement.execute("CREATE TABLE Gustos(" +
-                    "AUTO_ID int not null auto_increment primary key," +
-                    "ID_USUARIO int not null," +
-                    "Gusto varchar(20)," +
-                    "foreign key (ID_USUARIO) REFERENCES Usuario(ID_USUARIO))");
 
             //Tabla Familia Profesional Implicada
-            statement.execute("CREATE TABLE FamiliaProfesionalImplicada(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS FamiliaProfesionalImplicada(" +
                     "AUTO_ID int not null auto_increment primary key," +
                     "Proyecto_ID int not null," +
                     "FAMILIA_PROFESIONAL_ID int not null," +
@@ -122,7 +124,7 @@ public class Main {
                     "foreign key (FAMILIA_PROFESIONAL_ID) REFERENCES FamiliaProfesional(FAMILIA_PROFESIONAL_ID))");
 
             //Tabla ProyectosFav
-            statement.execute("CREATE TABLE ProyectosFav(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS ProyectosFav(" +
                     "AUTO_ID int not null auto_increment primary key ," +
                     "Proyecto_ID int not null," +
                     "ID_USUARIO int not null ," +
@@ -130,7 +132,7 @@ public class Main {
                     "foreign key (ID_USUARIO) REFERENCES Usuario(ID_USUARIO))");
 
             //Tabla CentrosDeProyectos
-            statement.execute("CREATE TABLE CentrosDeProyecto(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS CentrosDeProyecto(" +
                     "AUTO_ID int not null auto_increment primary key," +
                     "Proyecto_ID int not null," +
                     "ID_Centro int not null ," +
@@ -138,7 +140,7 @@ public class Main {
                     "foreign key (ID_Centro) REFERENCES Centros(ID_CENTRO))");
 
             //Tabla Tags
-            statement.execute("CREATE TABLE Tags(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS Tags(" +
                     "AUTO_ID int not null auto_increment primary key," +
                     "Proyecto_ID int not null ," +
                     "Tag varchar(20)," +
@@ -158,7 +160,6 @@ public class Main {
             statement.execute("DROP TABLE IF EXISTS ProyectosFav");
             statement.execute("DROP TABLE IF EXISTS CentrosDeProyecto");
             statement.execute("DROP TABLE IF EXISTS FamiliaProfesionalImplicada");
-            statement.execute("DROP TABLE IF EXISTS Gustos");
             statement.execute("DROP TABLE IF EXISTS Comentarios");
             statement.execute("DROP TABLE IF EXISTS Participantes");
             statement.execute("DROP TABLE IF EXISTS Usuario");
@@ -174,7 +175,7 @@ public class Main {
         try (Connection connection = Conexion.conectar()) {
             Statement statement = connection.createStatement();
             DBName="FactoriaProyectos";
-            statement.execute("CREATE DATABASE "+DBName+"");
+            statement.execute("CREATE DATABASE IF NOT EXISTS "+DBName+"");
             if (!Conexion.getURL().contains(DBName)){
                 Conexion.setURL("/"+DBName);
             }

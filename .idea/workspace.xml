@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5069ff12-79d0-4690-bd83-d58cfe9fe54d" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/ExtraerXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e1cef6-6b9c-4c0e-b773-44c4cfa240d1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entCentros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entCentros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entCentrosDeProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entCentrosDeProyecto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entComentarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entComentarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesionalImplicada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entFamiliaProfesionalImplicada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entGustos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entGustos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entParticipantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entParticipantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entProyectosFav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entProyectosFav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entTags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/entUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/entUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jmdl/fp2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +54,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -78,6 +68,40 @@
       <recent name="entity" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="ExtraerXml" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jmdl.fp2.ExtraerXml" />
+      <module name="FactoriaJMDL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jmdl.fp2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jmdl.fp2.Main" />
+      <module name="FactoriaJMDL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jmdl.fp2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ExtraerXml" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,7 +114,11 @@
       <workItem from="1674649290920" duration="249000" />
       <workItem from="1674649554608" duration="2629000" />
       <workItem from="1674806214170" duration="6996000" />
-      <workItem from="1675251838766" duration="3642000" />
+      <workItem from="1675251838766" duration="5368000" />
+      <workItem from="1675322905310" duration="180000" />
+      <workItem from="1675325838018" duration="658000" />
+      <workItem from="1675411722505" duration="391000" />
+      <workItem from="1675857551424" duration="2653000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1674810659106</created>
@@ -99,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674810659106</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1675255629052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675255629052</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
